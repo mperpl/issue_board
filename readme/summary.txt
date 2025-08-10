@@ -1,0 +1,18 @@
+Wnioski i Możliwe Usprawnienia Projektu
+
+Projekt "System Zarządzania Zgłoszeniami" jest funkcjonalną, konsolową aplikacją, która demonstruje kluczowe aspekty programowania w języku Python. Obejmuje on zarządzanie danymi w bazie SQLite, modularną strukturę kodu, efektywną obsługę błędów i wyjątków oraz integrację z zewnętrznym API sztucznej inteligencji (Google Gemini) do generowania podsumowań. Implementacja testów jednostkowych zapewniła solidność i poprawność działania kluczowych funkcji. Projekt stanowi dobrą bazę do dalszej nauki i rozwoju bardziej złożonych systemów.
+
+Możliwe Usprawnienia Projektu:
+
+- Interfejs graficzny (GUI): Przejście z interfejsu konsolowego na graficzny, np. z użyciem bibliotek takich jak Tkinter, PyQt lub Kivy, aby znacznie poprawić doświadczenia użytkownika.
+
+- Uwierzytelnianie i role użytkowników: Dodanie systemu logowania i autoryzacji, aby różni użytkownicy mogli zarządzać swoimi zgłoszeniami lub mieć różne poziomy dostępu do danych.
+
+- Wzbogacenie danych zgłoszeń: Rozszerzenie modelu danych o dodatkowe pola, takie jak priorytet (niski/średni/wysoki), przypisany użytkownik, data zakończenia, załączniki czy kategorie problemów.
+
+- Zaawansowane filtrowanie i wyszukiwanie: Implementacja bardziej złożonych opcji wyszukiwania tekstowego w tytułach i opisach zgłoszeń, a także filtrowania po wielu kryteriach.
+
+- Bardziej zaawansowane raporty i wizualizacje: Generowanie kompleksowych raportów (np. liczba zgłoszeń na status, średni czas rozwiązania, ranking użytkowników) i ich wizualizacja za pomocą bibliotek takich jak Matplotlib.
+
+- Zapis/Ładowanie konfiguracji: Umożliwienie zarządzania konfiguracją aplikacji (np. nazwa bazy danych, klucz API) poprzez plik konfiguracyjny zamiast bezpośrednio w kodzie.
+

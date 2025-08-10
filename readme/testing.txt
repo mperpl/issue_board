@@ -1,0 +1,8 @@
+Testowanie Projektu
+
+Implementacja Testów Jednostkowych:
+Projekt zawiera dedykowany plik 'test_issue_actions.py', który implementuje testy jednostkowe dla klasy IssueActions oraz pośrednio dla interakcji z DatabaseManager. Testy zostały napisane przy użyciu standardowego modułu 'unittest' języka Python. Każdy test jest niezależny i korzysta z czystej, tymczasowej bazy danych, która jest tworzona przed każdym testem i usuwana po jego zakończeniu. Zastosowano mockowanie zewnętrznych zależności (Google Gemini API) w celu zapewnienia, że testy są szybkie, powtarzalne i nie obciążają rzeczywistego API.
+
+Sposób Uruchomienia Testów:
+Aby uruchomić testy, przejdź do katalogu głównego projektu w terminalu/wierszu poleceń i wykonaj następujące polecenie:
+python -m unittest test_issue_actions.py

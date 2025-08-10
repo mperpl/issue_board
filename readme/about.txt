@@ -1,0 +1,47 @@
+Ogólny Opis Projektu
+
+Temat Projektu
+Projekt "Tablica Zgłoszeń" (Issue Board) to prosta, tekstowa aplikacja do zarządzania zgłoszeniami, problemami lub zadaniami. Umożliwia użytkownikom dodawanie, przeglądanie, aktualizowanie statusu oraz usuwanie zgłoszeń. Kluczową funkcjonalnością jest generowanie inteligentnych podsumowań najpilniejszych zgłoszeń za pomocą sztucznej inteligencji (Google Gemini API).
+
+Określenie Celu Projektu i Oczekiwanych Rezultatów
+Cel Projektu:
+* Usprawnienie zarządzania zgłoszeniami: Stworzenie prostego i intuicyjnego narzędzia do rejestrowania i śledzenia problemów.
+* Wsparcie decyzyjne z AI: Wykorzystanie AI do automatycznego identyfikowania i podsumowywania najbardziej krytycznych zgłoszeń, co ma pomóc w szybkim reagowaniu na priorytetowe problemy.
+* Nauka i eksploracja: Projekt służy również jako praktyczne ćwiczenie w integracji baz danych, interfejsów tekstowych oraz zewnętrznych API AI.
+
+Oczekiwane Rezultaty:
+* Funkcjonująca aplikacja konsolowa umożliwiająca podstawowe operacje CRUD (Create, Read, Update, Delete) na zgłoszeniach.
+* Moduł AI generujący trafne i zwięzłe podsumowania pilnych zgłoszeń.
+* Modularna i łatwa do zrozumienia struktura kodu.
+
+Opis Funkcjonalności Projektu
+Projekt oferuje następujące funkcjonalności:
+* AI Podsumowanie Najistotniejszych Zgłoszeń: Używa Google Gemini API do generowania rankingu pilności zgłoszeń.
+* Dodawanie Zgłoszenia: Użytkownik może wprowadzić nowy problem, podając jego tytuł i szczegółowy opis. Automatycznie przypisywana jest data utworzenia i początkowy status "new".
+* Wyświetlanie Zgłoszeń: Umożliwia przeglądanie wszystkich zgłoszeń lub filtrowanie ich po statusie (new, reviewed, in progress, completed, resolved).
+* Zmiana Statusu Zgłoszenia: Pozwala na aktualizację statusu istniejącego zgłoszenia.
+* Usuwanie Zgłoszenia: Umożliwia usunięcie zgłoszenia na podstawie jego unikalnego identyfikatora (ID).
+
+Krótka Instrukcja Uruchomienia Projektu
+1.  Sklonuj lub pobierz wszystkie pliki projektu do jednego katalogu.
+2.  Zainstaluj zależności Python:
+    Otwórz terminal w katalogu projektu i wykonaj komendę:
+    ```
+    pip install google-generativeai
+    ```
+3.  Uzyskaj klucz API Google Gemini z Google AI Studio.
+4.  `secret.py` jest tym samym katalogu co reszta plików. Dodaj do niego swój klucz API:
+    ```python
+    # secret.py
+    GEMINI_API_KEY = "TWOJ_PRAWDZIWY_KLUCZ_API_GEMINI"
+    ```
+5.  Uruchom aplikację z terminala, przechodząc do katalogu projektu i wykonując komendę:
+    ```
+    python main.py
+    ```
+
+Opis Technologii Użytych w Projekcie
+* **Python 3:** Główny język programowania.
+* **SQLite3:** Lekka, bezserwerowa baza danych używana do przechowywania zgłoszeń. Dostęp do niej odbywa się poprzez wbudowany moduł `sqlite3` w Pythonie.
+* **Google Gemini API (model gemini-1.5-flash):** Zewnętrzne API wykorzystywane do generowania podsumowań i rankingów pilności za pomocą modeli sztucznej inteligencji.
+* **Standardowa biblioteka Pythona:** Wykorzystane moduły takie jak `datetime` (do obsługi dat i czasu), `os` (do operacji systemowych, np. w testach), `subprocess` (do uruchamiania `fetch_view.py` w nowym oknie) i `unittest` (do testów jednostkowych).

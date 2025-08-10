@@ -1,0 +1,23 @@
+Analiza Wymagań
+
+Spis Wymagań Funkcjonalnych i Niefunkcjonalnych Projektu
+
+Wymagania Funkcjonalne:
+* Użytkownik musi mieć możliwość dodawania nowych zgłoszeń z tytułem i opisem.
+* System musi przechowywać zgłoszenia w trwałej bazie danych (SQLite).
+* Użytkownik musi mieć możliwość wyświetlenia wszystkich zgłoszeń.
+* Użytkownik musi mieć możliwość filtrowania zgłoszeń po statusie (new, reviewed).
+* Użytkownik musi mieć możliwość zmiany statusu zgłoszenia.
+* Użytkownik musi mieć możliwość usunięcia zgłoszenia po jego ID.
+* System musi generować AI-podsumowanie 5 najbardziej pilnych zgłoszeń na podstawie ich treści (przy użyciu Google Gemini API).
+* System musi wyświetlać menu z dostępnymi opcjami dla użytkownika (interfejs tekstowy).
+* System musi walidować podstawowe dane wejściowe (np. niepuste pola, poprawne ID, prawidłowy status).
+
+Wymagania Niefunkcjonalne:
+* **Wydajność:** Podsumowania AI powinny być generowane w rozsądnym czasie.
+* **Niezawodność:** Aplikacja powinna być stabilna i obsługiwać podstawowe błędy (np. brak zgłoszeń, błędne ID, problemy z API).
+* **Bezpieczeństwo (API Key):** Klucz API Google Gemini nie powinien być hardkodowany w głównym kodzie (przechowywany w `secret.py`).
+* **Użyteczność (UI):** Interfejs użytkownika powinien być prosty i tekstowy (CLI), łatwy w nawigacji.
+* **Modularność:** Kod projektu powinien być zorganizowany w oddzielne moduły (`DatabaseManager.py`, `IssueActions.py`, `TextUi.py`, `main.py`, `fetch_view.py`, `secret.py`, `test_issue_actions.py`) dla lepszej czytelności i utrzymania.
+* **Testowalność:** Kluczowe funkcjonalności powinny być pokryte testami jednostkowymi.
+* **Przenośność otwierania okna:** Komendy subprocess w `TextUi.py` powinny być dostosowane do otwierania nowych okien konsoli na systemach operacyjnych, na których aplikacja ma działać (obecnie dostosowane do Windows).
